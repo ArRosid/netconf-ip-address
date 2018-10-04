@@ -11,8 +11,8 @@ with open('inventory.yml') as f:
 	inventory = f.read()
 
 inventory_dict = yaml.load(inventory)
-
-
+print(json.dumps(inventory_dict,indent=4))
+'''
 netconf_template = open('ip_address_template.xml').read()
 
 
@@ -33,3 +33,4 @@ with manager.connect(host='192.168.122.10', port='830',
 	netconf_reply = m.edit_config(netconf_payload, target='running')
 
 	print(netconf_reply)
+'''
