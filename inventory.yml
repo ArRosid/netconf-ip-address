@@ -1,0 +1,61 @@
+CORE: 
+  - host: 192.168.122.11
+    int_config:
+      - interface: GigabitEthernet3
+        ip_address: 192.168.10.1
+        subnetmask: 255.255.255.0
+        description: To PC-1
+      - interface: GigabitEthernet4
+        ip_address: 192.168.11.1
+        subnetmask: 255.255.255.0
+        description: To PC-2
+      - interface: GigabitEthernet2
+        ip_address: 10.10.12.1
+        subnetmask: 255.255.255.0
+        description: To CSR-2
+
+
+  - host: 192.168.122.12
+    int_config:
+      - interface: GigabitEthernet3
+        ip_address: 10.10.23.2
+        subnetmask: 255.255.255.0
+        description: To CSR-3
+      - interface: GigabitEthernet4
+        ip_address: 192.168.20.1
+        subnetmask: 255.255.255.0
+        description: To PC-3
+      - interface: GigabitEthernet2
+        ip_address: 10.10.12.2
+        subnetmask: 255.255.255.0
+        description: To CSR-1
+
+  - host: 192.168.122.13
+    int_config:
+      - interface: GigabitEthernet3
+        ip_address: 10.10.34.3
+        subnetmask: 255.255.255.0
+        description: To CSR-4
+      - interface: GigabitEthernet4
+        ip_address: 192.168.30.1
+        subnetmask: 255.255.255.0
+        description: To PC-4
+      - interface: GigabitEthernet2
+        ip_address: 10.10.23.3
+        subnetmask: 255.255.255.0
+        description: To CSR-2
+
+  - host: 192.168.122.14
+    int_config:
+      - interface: GigabitEthernet3
+        ip_address: 192.168.40.1
+        subnetmask: 255.255.255.0
+        description: To PC-5
+      - interface: GigabitEthernet4
+        ip_address: 192.168.41.1
+        subnetmask: 255.255.255.0
+        description: To PC-6
+      - interface: GigabitEthernet2
+        ip_address: 10.10.34.4
+        subnetmask: 255.255.255.0
+        description: To CSR-3
