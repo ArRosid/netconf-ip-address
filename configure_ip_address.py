@@ -1,6 +1,7 @@
 from ncclient import manager
 import xmltodict
 import json
+import yaml
 
 IETF_INTERFACE_TYPES = {
         "loopback": "ianaift:softwareLoopback",
