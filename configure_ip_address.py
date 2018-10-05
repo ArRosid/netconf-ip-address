@@ -22,7 +22,7 @@ for device in device_list:
 	print(f'Configuring IP Address on {host}')
 	print('----------------------------------------')
 
-	#add <config> to the payload
+	##add <config> to the payload
 	netconf_payload_list = ['<config>'] 
 
 	for intf in interface_list:
@@ -31,19 +31,19 @@ for device in device_list:
 												ip_addr=intf['ip_address'],
 												subnetmask=intf['subnetmask'],
 												int_type=intf['type'])
-		print(intf_netconf_payload)
-		#add payload for all interface
+		#print(intf_netconf_payload)
+		##add payload for all interface
 		netconf_payload_list.append(intf_netconf_payload)
 
-	#add the close </config> to the payload
+	##add the close </config> to the payload
 	netconf_payload_list.append('</config>')
 
-	#join the payload_list
+	##join the payload_list
 	netconf_payload = ''.join(netconf_payload_list)
 
-	print(netconf_payload)
+	#print(netconf_payload)
 
-	#send the payload to the host
+	##send the payload to the host
 	with manager.connect(host=host, port='830',
 						username='cisco', password='cisco',
 						hostkey_verify=False) as m:
