@@ -27,10 +27,10 @@ for device in device_list:
 
 	for intf in interface_list:
 		intf_netconf_payload = netconf_template.format(int_name=intf['interface'],
-												int_desc=intf['description'],
-												ip_addr=intf['ip_address'],
-												subnetmask=intf['subnetmask'],
-												int_type=intf['type'])
+							int_desc=intf['description'],
+							ip_addr=intf['ip_address'],
+							subnetmask=intf['subnetmask'],
+							int_type=intf['type'])
 		#print(intf_netconf_payload)
 		##add payload for all interface
 		netconf_payload_list.append(intf_netconf_payload)
@@ -45,8 +45,8 @@ for device in device_list:
 
 	##send the payload to the host
 	with manager.connect(host=host, port='830',
-						username='cisco', password='cisco',
-						hostkey_verify=False) as m:
+			username='cisco', password='cisco',
+			hostkey_verify=False) as m:
 
 		netconf_reply = m.edit_config(netconf_payload, target='running')
 		print(netconf_reply)
