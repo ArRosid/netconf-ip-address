@@ -24,5 +24,6 @@ This repository contains script to configure IP Address on Cisco IOS XE automati
 	<li>Install the requirements library</li>
 	<li>Configure IP Address Management in the routers</li>
 	<li>Activate netconf and yang in the routers using the command <i>netconf ssh</i> and <i>netconf-yang</i></li>
+	<li>Edit the inventory.yml to meet your topology</li>
 	<li>Run the script using command <i>python3 configure_ip_address.py</i></li>
 </ul>
