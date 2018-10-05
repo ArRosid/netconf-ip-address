@@ -16,7 +16,7 @@ This repository contains script to configure IP Address on Cisco IOS XE automati
 
 <h3>Supported Devices</h3>
 <ul>
-	<li>This script supported on IOS XE</li>
+	<li>This script tested on IOS XE</li>
 </ul>
 
 <h3>How To Use</h3>
